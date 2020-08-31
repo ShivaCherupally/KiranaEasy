@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6666</color>
+    <color name="colorPrimaryDark">#ff6666</color>
+    <color name="colorAccent">#ff6666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="bold_text_color">#B91A30</color>
+    <color name="app_snack_bar_true">#27BE60</color>
+    <color name="yellow">#ffcc00</color>
+
+    <color name="lite_black">#808080</color>
+
+    <color name="transperent">#00000000</color>
+
+    <color name="background_page">#eff5f5</color>
+
+
+
+
+
+
+</resources>

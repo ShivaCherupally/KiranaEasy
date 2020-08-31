@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Kirana Easy</string>
+
+    <string name="queone">Dummy List </string>
+    <string name="quetwo">Question 2</string>
+    <string name="quethree">Electric Meter Reader</string>
+    <string name="quefour">Student List API</string>
+
+
+    <string name="service_no">Service No</string>
+    <string name="current_meter">Meter reading</string>
+
+    <string name="submit">Submit</string>
+    <string name="title_activity_splashscreen">Splashscreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Mobile No</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+
+    <string name="forgot_password_label">Forgot Password</string>
+
+
+    <string name="name">"Name"</string>
+    <string name="mobile">"Mobile No"</string>
+    <string name="enterotp">"Enter otp"</string>
+    <string name="password">"Password"</string>
+    <string name="con_password">"Confirm Password"</string>
+
+    <string name="male">"Male"</string>
+    <string name="female">"FeMale"</string>
+    <string name="signup">"Signup"</string>
+
+    <string name="verify">"Verify"</string>
+
+    <string name="sendotp">"Send otp"</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_signup">Signup</string>
+
+
+    <string name="enter_mobile">Enter Mobile No</string>
+    <string name="enter_pwd">Enter Password</string>
+    <string name="enter_con_password">"Enter Confirm Password"</string>
+    <string name="donthave">Dont have an account? </string>
+
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="emailopt">Email(Optional)</string>
+    <string name="register">Register</string>
+    <string name="donthavesignin">Do have an account? Sign in</string>
+
+    <string name="welcomekirana">Welcome To Kirana Easy</string>
+    <string name="verifymobile">Verify Your Mobile Number</string>
+    <string name="emailid">Email</string>
+    <string name="verifynow">"Verify Now"</string>
+
+    <string name="entermobileno">"Enter Your Mobile Number"</string>
+
+    <string name="resend">Resend</string>
+</resources>
