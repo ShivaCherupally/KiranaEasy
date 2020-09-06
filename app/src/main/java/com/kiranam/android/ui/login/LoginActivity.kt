@@ -1,39 +1,45 @@
-package com.kiranam.android.ui.ui.login
+package com.kiranam.android.ui.login
 
 import android.app.Activity
 import android.content.Intent
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.annotation.StringRes
-import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.*
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.kiranam.android.R
-import com.kiranam.android.StudentListActivity
+import com.kiranam.android.bottommenu.BottomMenuActivity
+import com.kiranam.android.fontstyles.ButtonMedium
+import com.kiranam.android.fontstyles.EditTextMediumWithoutEmoji
+import com.kiranam.android.fontstyles.EditTextRegular
 import com.kiranam.android.ui.ForgotPassword
-import com.kiranam.android.ui.Signup
+import com.kiranam.android.ui.signup.Signup
+import com.kiranam.android.utils.Utility
 
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
+    private var container: RelativeLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
 
-        val username = findViewById<EditText>(R.id.username)
-        val password = findViewById<EditText>(R.id.password)
-        val login = findViewById<Button>(R.id.login)
+        val username = findViewById<EditTextRegular>(R.id.username)
+        val password = findViewById<EditTextMediumWithoutEmoji>(R.id.passwordlogin)
+        val login = findViewById<ButtonMedium>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         val signuptxt = findViewById<TextView>(R.id.signuptxt)
         val forgotpwd = findViewById<TextView>(R.id.forgotpwd)
+
+        container = findViewById<RelativeLayout>(R.id.container)
 
         loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
@@ -42,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
             val loginState = it ?: return@Observer
             // disable login button unless both username / password is valid
             login.isEnabled = loginState.isDataValid
-
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
             }
@@ -67,37 +72,49 @@ class LoginActivity : AppCompatActivity() {
             finish()
         })
 
-        username.afterTextChanged {
-            loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
-            )
-        }
+        /*  username.afterTextChanged {
+              loginViewModel.loginDataChanged(
+                      username.text.toString(),
+                      password.text.toString()
+              )
+          }
 
-        password.apply {
-            afterTextChanged {
-                loginViewModel.loginDataChanged(
-                        username.text.toString(),
-                        password.text.toString()
-                )
-            }
+          password.apply {
+              afterTextChanged {
+                  loginViewModel.loginDataChanged(
+                          username.text.toString(),
+                          password.text.toString()
+                  )
+              }
 
-            setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE ->
-                        loginViewModel.login(
-                                username.text.toString(),
-                                password.text.toString()
-                        )
-                }
-                false
-            }
+              setOnEditorActionListener { _, actionId, _ ->
+                  when (actionId) {
+                      EditorInfo.IME_ACTION_DONE ->
+                          loginViewModel.login(
+                                  username.text.toString(),
+                                  password.text.toString()
+                          )
+                  }
+                  false
+              }
 
-            login.setOnClickListener {
+          }*/
+
+        login.setOnClickListener {
+//            loading.visibility = View.VISIBLE
+            if (username.text.toString().length == 0) {
+                Utility.showSnackBar(this, container, "Please Enter Mobile no", 1)
+            } else if (username.text.toString().length != 10) {
+                Utility.showSnackBar(this, container, "Please Valid Mobile no", 1)
+            } else if (password.text.toString().length == 0) {
+                Utility.showSnackBar(this, container, "Please Enter Password", 1)
+            } else {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
-
             }
+
+
+//            Utility.showSnackBar(applicationContext, container, "Please Enter Mobile no", 2)
 
         }
 
@@ -120,12 +137,13 @@ class LoginActivity : AppCompatActivity() {
                 "$welcome $displayName",
                 Toast.LENGTH_LONG
         ).show()
-        startActivity(Intent(this, StudentListActivity::class.java))
+        startActivity(Intent(this, BottomMenuActivity::class.java))
 
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+
     }
 }
 

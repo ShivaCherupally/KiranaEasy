@@ -1,4 +1,4 @@
-package com.kiranam.android.ui.ui.login
+package com.kiranam.android.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

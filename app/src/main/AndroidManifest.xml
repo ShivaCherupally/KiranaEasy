@@ -26,12 +26,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".ui.ui.login.LoginActivity"
+            android:name="com.kiranam.android.ui.login.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.Signup"
+            android:name="com.kiranam.android.ui.signup.Signup"
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -49,7 +50,12 @@
 
         <activity
             android:name=".ui.OtpActivity"
-            android:parentActivityName=".ui.ui.login.LoginActivity"
+            android:parentActivityName="com.kiranam.android.ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".bottommenu.BottomMenuActivity"
+            android:parentActivityName="com.kiranam.android.ui.login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
     </application>

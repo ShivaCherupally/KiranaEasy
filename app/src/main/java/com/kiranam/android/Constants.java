@@ -4,7 +4,16 @@ package com.kiranam.android;
 public class Constants {
 
     //    public static final String BASE_URL = "http://hyd.today/"; //http://13.235.235.58:8000/
-    public static final String BASE_URL = "http://13.235.235.58:8000/";
+//    public static final String BASE_URL = "http://13.235.235.58:8000/";
+
+//    public static final String BASE_URL = "http://kiranaeasy.com/beta/mobileapp/";
+
+    public static final String BASE_URL = "https://reqres.in/api/";
+
+    //https://reqres.in/api/register
+
+    public static final String SIGN_UP = "register/";
+
 
     public static final String IMAGE_BASE_URL = "";
 
@@ -27,4 +36,6 @@ public class Constants {
     //    public static final String AVATAR_IMAGE_URL = "http://13.235.235.58/Qnature/profiles/376.jpg";
     public static final String AVATAR_IMAGE_URL = "http://13.235.235.58/Qnature/";
     public static final String AVATAR_IMAGE_DUMMY_URL = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
+
+
 }

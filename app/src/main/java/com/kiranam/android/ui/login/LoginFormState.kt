@@ -1,4 +1,4 @@
-package com.kiranam.android.ui.ui.login
+package com.kiranam.android.ui.login
 
 /**
  * Data validation state of the login form.

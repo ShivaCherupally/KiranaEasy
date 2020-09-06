@@ -2,100 +2,101 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "29.0.3"
+  compileSdkVersion 30
+  buildToolsVersion "29.0.3"
 
-    defaultConfig {
-        applicationId "com.kiranam.android"
-        minSdkVersion 19
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+  defaultConfig {
+    applicationId "com.kiranam.android"
+    minSdkVersion 19
+    targetSdkVersion 30
+    versionCode 1
+    versionName "1.0"
+    multiDexEnabled true
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
-    dataBinding {
-        enabled = true
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+  }
+  dataBinding {
+    enabled = true
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
 
 
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.1.0'
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+  implementation fileTree(dir: "libs", include: ["*.jar"])
+  implementation 'androidx.appcompat:appcompat:1.1.0'
+  implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+  implementation 'androidx.appcompat:appcompat:1.1.0'
+  implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+  implementation 'androidx.cardview:cardview:1.0.0'
+  implementation 'com.google.android.material:material:1.1.0'
+  implementation 'androidx.multidex:multidex:2.0.1'
+  implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 
-    // image loading
-    implementation 'com.facebook.fresco:fresco:2.0.0'
+  // image loading
+  implementation 'com.facebook.fresco:fresco:2.0.0'
 
-    // network calls
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+  // network calls
+  implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
-    //json factory
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+  //json factory
+  implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+  implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+  implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+  implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 
-    // google
-    implementation 'com.google.code.gson:gson:2.8.5'
+  // google
+  implementation 'com.google.code.gson:gson:2.8.5'
 
-    // tasks java-rx android
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
-
-
-    // Room components
-    //noinspection GradleDependency
-    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
-    implementation 'androidx.annotation:annotation:1.1.0'
-    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
-    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+  // tasks java-rx android
+  implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+  implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
 
 
-    // Lifecycle components
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    //noinspection LifecycleAnnotationProcessorWithJava8
-    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0'
-
-    //Dimentions
-    implementation 'com.intuit.ssp:ssp-android:1.0.5'
-    implementation 'com.intuit.sdp:sdp-android:1.0.5'
-
-    implementation 'android.arch.persistence.room:runtime:2.3.0';
-    annotationProcessor 'android.arch.persistence.room:compiler:2.3.0';
+  // Room components
+  //noinspection GradleDependency
+  implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+  implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+  implementation 'androidx.annotation:annotation:1.1.0'
+  annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+  androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
 
+  // Lifecycle components
+  implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+  //noinspection LifecycleAnnotationProcessorWithJava8
+  annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0'
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+  //Dimentions
+//  implementation 'com.intuit.ssp:ssp-android:1.0.5'
+//  implementation 'com.intuit.sdp:sdp-android:1.0.5'
+  implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+  implementation 'android.arch.persistence.room:runtime:2.3.0';
+  annotationProcessor 'android.arch.persistence.room:compiler:2.3.0';
+
+
+
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 
 

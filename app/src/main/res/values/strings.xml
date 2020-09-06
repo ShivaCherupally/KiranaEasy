@@ -11,6 +11,9 @@
     <string name="current_meter">Meter reading</string>
 
     <string name="submit">Submit</string>
+
+    <string name="loginn">Log In</string>
+
     <string name="title_activity_splashscreen">Splashscreen</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -58,7 +61,7 @@
     <string name="enter_con_password">"Enter Confirm Password"</string>
     <string name="donthave">Dont have an account? </string>
 
-    <string name="firstname">First Name</string>
+    <string name="firstname">Full Name</string>
     <string name="lastname">Last Name</string>
     <string name="emailopt">Email(Optional)</string>
     <string name="register">Register</string>

@@ -1,4 +1,4 @@
-package com.kiranam.android.ui.ui.login
+package com.kiranam.android.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

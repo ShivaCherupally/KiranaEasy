@@ -3,11 +3,9 @@ package com.kiranam.android.ui
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.kiranam.android.R
-import com.kiranam.android.ui.ui.login.LoginActivity
+import com.kiranam.android.ui.login.LoginActivity
 
 class Splashscreen : AppCompatActivity() {
 

@@ -15,4 +15,5 @@ public interface IStudentService {
 
     @GET(Constants.GET_ALL_STUDENTS_URL)
     Observable<Response<StudentListResponse>> getAllStudentsBySchoolId(@Query("SchoolID") String SchoolID);
+
 }

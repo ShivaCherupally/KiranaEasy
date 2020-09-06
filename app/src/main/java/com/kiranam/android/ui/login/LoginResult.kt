@@ -1,4 +1,4 @@
-package com.kiranam.android.ui.ui.login
+package com.kiranam.android.ui.login
 
 /**
  * Authentication result : success (user details) or error message.
