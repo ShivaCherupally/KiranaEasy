@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nestedScrollViewContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue_ge"
+        android:visibility="gone" />
+
+    <com.goodeggs.android.utils.MyNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/loading">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/categorylistRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:padding="@dimen/_2sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/mycartlabelRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.goodeggs.android.fontstyles.TextViewSemiBold
+                        android:id="@+id/mycartlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/mycartt"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/addedListRecy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/mycartlabel"
+                        android:clipToPadding="false" />
+
+                    <com.goodeggs.android.fontstyles.ButtonMedium
+                        android:id="@+id/ordernow"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_below="@+id/addedListRecy"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/skyblue_ge"
+                        android:text="Order now"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </com.goodeggs.android.utils.MyNestedScrollView>
+</RelativeLayout>

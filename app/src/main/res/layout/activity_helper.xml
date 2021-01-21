@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetLeft="10dp"
+            app:contentInsetStart="10dp"
+            app:contentInsetStartWithNavigation="10dp"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/backimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_header_back"
+                android:tint="@color/white" />
+
+            <com.goodeggs.android.fontstyles.TextViewSemiBold
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toRightOf="@id/backimg"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlCartLL"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/iNotifications"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_shopping_cart_red"
+                    android:tint="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/cartCountTv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/badge_background"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/lite_black"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

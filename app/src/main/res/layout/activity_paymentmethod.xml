@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorAccent"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loading"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/rectangle_bg"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+
+            <RadioButton
+                android:id="@+id/checkrdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/albtint"
+                android:checked="true"
+                android:clickable="false" />
+
+            <com.goodeggs.android.fontstyles.TextViewSemiBold
+                android:id="@+id/totalitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/checkrdbtn"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/cashondelivery"
+                android:textAllCaps="false"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_14sdp" />
+
+
+        </RelativeLayout>
+
+        <com.goodeggs.android.fontstyles.TextViewBold
+            android:id="@+id/pricedetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/pricedetails"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/dividerline"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/pricedetails"
+            android:background="@color/lite_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividerline"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/itemscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/priceditems"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/itemstotalprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_3sdp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/deliverycharges"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/deliveryamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/threehundered"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/dividerlinetwo"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/lite_black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/amountpayble"
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/totalamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_3sdp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:indeterminate="true"
+            android:indeterminateTint="#007AFF"
+            android:visibility="gone">
+
+        </ProgressBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/dividerlinethree"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/lite_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.fontstyles.TextViewSemiBold
+                    android:id="@+id/totalamountbottom"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/proceedbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:text="@string/placeorder"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/lite_black" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/rectangle_bg_black_stroke">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:tint="@color/lite_black" />
+
+
+        <com.goodeggs.android.fontstyles.EditTextMedium
+            android:id="@+id/eSearchBarNew"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_toRightOf="@id/backimg"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/_5sdp"
+            android:focusable="true"
+            android:hint="Search by orderid"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/iClearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_close"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:visibility="gone" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categorylistRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

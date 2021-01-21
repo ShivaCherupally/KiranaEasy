@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/middlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/skyblue_ge"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorAccent"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/oldpasswordet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="@string/oldpassword"
+                android:imeOptions="actionNext"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@drawable/rectangle_less">
+
+                <EditText
+                    android:id="@+id/newpasswordet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="@string/passwordd"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:paddingStart="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/grey" />
+
+                <ImageView
+                    android:id="@+id/imageViewpasswordhide"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/ic_baseline_check_24"
+                    android:backgroundTint="@color/white"
+                    android:padding="@dimen/_7sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@drawable/rectangle_less">
+
+                <EditText
+                    android:id="@+id/confirmpasswordet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="@string/con_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:paddingStart="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/grey" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/ic_baseline_check_24"
+                    android:backgroundTint="@color/white"
+                    android:padding="@dimen/_7sdp" />
+            </RelativeLayout>
+
+
+            <com.goodeggs.android.fontstyles.ButtonMedium
+                android:id="@+id/submitbtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/white"
+                android:text="@string/signin"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/lite_black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

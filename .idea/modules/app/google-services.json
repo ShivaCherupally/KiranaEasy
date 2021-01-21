@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1038296922376",
+    "firebase_url": "https://task-fd978.firebaseio.com",
+    "project_id": "task-fd978",
+    "storage_bucket": "task-fd978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038296922376:android:a831a929ca4fde3fd614bd",
+        "android_client_info": {
+          "package_name": "com.kiranam.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038296922376-ddrtpcghh43elopd1iggl8f3kl1mdnne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kiranam.android",
+            "certificate_hash": "45d7b61b84be7148d90e6258ff6ef2adbf22c75c"
+          }
+        },
+        {
+          "client_id": "1038296922376-bhevf9un13ujns2fus6hosasbmssp01m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXWs_cAwN8ktASBiIfWLHdQcnaR6mcW6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038296922376-bhevf9un13ujns2fus6hosasbmssp01m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

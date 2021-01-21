@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kiranam.android">
+    package="com.goodeggs.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.kiranam.android.ApplicationController"
+        android:name="com.goodeggs.android.ApplicationController"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logoicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="false">
 
 
         <activity
@@ -28,35 +31,61 @@
         </activity>
 
         <activity
-            android:name="com.kiranam.android.ui.login.LoginActivity"
+            android:name="com.goodeggs.android.ui.Comingsoon"
+            android:label="@string/comingsoon"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.goodeggs.android.bottommenu.HelperActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.goodeggs.android.bottommenu.BottomMenuNew"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.goodeggs.android.ui.login.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.kiranam.android.ui.signup.Signup"
+            android:name="com.goodeggs.android.ui.signup.SignUpActivity"
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ui.ForgotPassword"
-            android:label="@string/forgot_password_label" />
-        <activity
-            android:name=".BulkDataActivity"
-            android:parentActivityName=".Home" />
-        <activity
-            android:name=".StudentListActivity"
-            android:parentActivityName=".ui.Home" />
-        <activity
-            android:name=".ElectricMeterReaderActivity"
-            android:parentActivityName=".Home" />
+        <!--     <activity
+                 android:name=".ui.ForgotPassword"
+                 android:label="@string/forgot_password_label" />-->
+        <!-- <activity
+             android:name=".BulkDataActivity"
+             android:parentActivityName=".Home" />
+         <activity
+             android:name=".StudentListActivity"
+             android:parentActivityName=".ui.Home" />
+         <activity
+             android:name=".ElectricMeterReaderActivity"
+             android:parentActivityName=".Home" />-->
 
-        <activity
+        <!--<activity
             android:name=".ui.OtpActivity"
-            android:parentActivityName="com.kiranam.android.ui.login.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName="goodeggss.android.ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />-->
 
+<!--        <service android:name="goodeggss.android.firbasesetup.MyFirebaseMessagingService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
         <activity
-            android:name=".bottommenu.BottomMenuActivity"
-            android:parentActivityName="com.kiranam.android.ui.login.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="com.goodeggs.android.ui.forgot.ForgotActivity"
+            android:label="@string/forgot_password_label"
+            android:parentActivityName="com.goodeggs.android.ui.login.LoginActivity" />
+
+        <!--        <activity
+                    android:name=".bottommenu.BottomMenu"
+                    android:parentActivityName="goodeggss.android.ui.login.LoginActivity"
+                    android:theme="@style/AppTheme.NoActionBar" />-->
 
     </application>
 

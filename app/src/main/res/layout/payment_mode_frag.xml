@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/middlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorAccent"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.goodeggs.android.fontstyles.TextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/firstname"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <EditText
+                android:id="@+id/fullnameet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:imeOptions="actionNext"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/lastname"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="@string/lastname"
+                android:imeOptions="actionNext"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/mobile"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <EditText
+                android:id="@+id/mobileet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/doorno"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/doornoet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:imeOptions="actionNext"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/pincode"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <EditText
+                android:id="@+id/pincodeet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/landmark"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <EditText
+                android:id="@+id/landmarket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rectangle_bg"
+                android:imeOptions="actionDone"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/button_bg"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

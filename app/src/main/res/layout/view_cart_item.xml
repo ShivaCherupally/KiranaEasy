@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+
+            <!--<TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Price : 10" />-->
+
+
+            <ImageView
+                android:id="@+id/productimg"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+            <com.goodeggs.android.fontstyles.TextViewRegular
+                android:id="@+id/productname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/productimg"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="Item X  "
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/pricelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productname"
+                android:gravity="end">
+
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/salepricetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="2"
+                    android:text="Save 15.00 "
+                    android:textColor="@color/konect_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/mrptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/salepricetv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="2"
+                    android:padding="3dp"
+                    android:text="MRP.150.00  "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pricelayout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.utils.CartCounterView
+                    android:id="@+id/counterView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageButton
+                    android:id="@+id/removeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_baseline_remove_24"
+                    android:tint="@color/lite_black"
+                    android:visibility="gone" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/quatitytv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="2"
+                    android:text="5"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone" />
+
+
+                <ImageButton
+                    android:id="@+id/addextraBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:tint="@color/lite_black"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/productimg"
+                android:background="@color/lite_black"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productimg"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/removebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_bg_red_stroke"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/remove"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/continueshopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_bg_red_stroke"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/continue_shopping"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

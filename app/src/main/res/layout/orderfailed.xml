@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/ic_failure" />
+
+        <com.goodeggs.android.fontstyles.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Failed Order"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/orderid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="It Seems Currently we are unable not deliver"
+            android:textColor="@color/lite_black"
+            android:textSize="@dimen/_12sdp" />
+
+           <com.goodeggs.android.fontstyles.TextViewBold
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:text="the your location "
+               android:textColor="@color/lite_black"
+               android:textSize="@dimen/_12sdp" />
+
+        <com.goodeggs.android.fontstyles.ButtonMedium
+            android:id="@+id/continuebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:backgroundTint="#4da6ff"
+            android:text="Try other"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</layout>

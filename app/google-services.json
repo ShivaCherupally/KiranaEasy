@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "637347897364",
+    "firebase_url": "https://kirana-easy-1c4bd.firebaseio.com",
+    "project_id": "kirana-easy-1c4bd",
+    "storage_bucket": "kirana-easy-1c4bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637347897364:android:44c74ddbad86df536ac701",
+        "android_client_info": {
+          "package_name": "com.goodeggs.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637347897364-gmp2agecqcbl6t0pe01o8kqbal7ss34b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goodeggs.android",
+            "certificate_hash": "45d7b61b84be7148d90e6258ff6ef2adbf22c75c"
+          }
+        },
+        {
+          "client_id": "637347897364-ldpool8ahe7s2h080vjjrqgp9alnfdid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5D9Lu8RP2KheO4tKeakrh6Cg0X8a2Tao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637347897364-ldpool8ahe7s2h080vjjrqgp9alnfdid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

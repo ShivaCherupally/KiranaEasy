@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/rectangle_bg"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <com.goodeggs.android.fontstyles.TextViewSemiBold
+                android:id="@+id/totalitems"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent" />
+
+            <com.goodeggs.android.fontstyles.TextViewSemiBold
+                android:id="@+id/totalpricetv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/konect_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mycartlabelRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header">
+
+            <com.goodeggs.android.fontstyles.TextViewBold
+                android:id="@+id/mycartlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/mycart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <com.goodeggs.android.fontstyles.TextViewRegular
+                android:id="@+id/minvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:padding="@dimen/_4sdp"
+                android:text="* Minimum order value Rs 200"
+                android:textAllCaps="false"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dividerline"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/mycartlabelRl"
+            android:background="@color/lite_black" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomLa"
+            android:layout_below="@+id/dividerline"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_5sdp" />
+
+        <com.goodeggs.android.fontstyles.ButtonMedium
+            android:id="@+id/continuebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/rectangle_bg_black_stroke"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/continue_shopping"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/bottomLa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <com.goodeggs.android.fontstyles.TextViewRegular
+                android:id="@+id/apptimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/orderaceept"
+                android:textAllCaps="false"
+                android:textColor="@color/lite_black"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+
+
+            <com.goodeggs.android.fontstyles.ButtonMedium
+                android:id="@+id/proceedbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rectangle_bg_red_stroke"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="@dimen/_5sdp"
+                android:text="Order now"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

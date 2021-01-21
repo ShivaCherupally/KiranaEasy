@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kirana Easy</string>
+    <string name="app_name">GoodEggs</string>
 
     <string name="queone">Dummy List </string>
     <string name="quetwo">Question 2</string>
@@ -7,12 +7,71 @@
     <string name="quefour">Student List API</string>
 
 
+    <string-array name="birds">
+        <item>crane</item>
+        <item>Cuckoo</item>
+        <item>Pigeon</item>
+        <item>Eagle</item>
+        <item>Owl</item>
+        <item>Vulture</item>
+        <item>WoodPecker</item>
+    </string-array>
+
     <string name="service_no">Service No</string>
     <string name="current_meter">Meter reading</string>
 
     <string name="submit">Submit</string>
+    <string name="welcometo">Welcome to </string>
+
+    <string name="goodeggs">GOOD EGGS</string>
 
     <string name="loginn">Log In</string>
+    <string name="signin">SIGN IN</string>
+    <string name="addcart">ADD</string>
+
+    <string name="address">Address</string>
+    <string name="shipping">Order Address :</string>
+    <string name="remove">Remove</string>
+    <string name="continue_shopping">Shop now</string>
+
+    <string name="mycartt">My Cart</string>
+
+
+    <string name="totalamount">Total Amount</string>
+
+    <string name="ordertotal">Order total</string>
+
+    <string name="totalitems">Total items 1 in your cart</string>
+    <string name="totalprice">Total price 300</string>
+
+    <string name="cashondelivery">Cash on delivery</string>
+
+    <string name="mycart">My Cart</string>
+
+    <string name="orderaceept">Note*: Orders will be accept in between 8 am to 6:30pm</string>
+
+    <string name="proceedtocheck">Proceed to checkout</string>
+
+    <string name="placeorder">Place Order</string>
+
+    <string name="proceed">Proceed</string>
+
+    <string name="pricedetails">Price Details</string>
+
+    <string name="priceditems">Price </string>
+
+    <string name="order">Order Id #</string>
+    <string name="orderstatus">Order Status</string>
+
+    <string name="deliverycharges">Delivery Charges</string>
+
+    <string name="orderdate">Order Date</string>
+
+    <string name="amountpayble">Amount Payable </string>
+
+    <string name="threehundered">Rs 20.0</string>
+
+    <string name="sixhunderd">RS 600.00</string>
 
     <string name="title_activity_splashscreen">Splashscreen</string>
     <!-- Strings used for fragments for navigation -->
@@ -29,6 +88,9 @@
     <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome!"</string>
+
+    <string name="username">Username</string>
+
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -36,14 +98,33 @@
 
     <string name="forgot_password"><u>Forgot Password?</u></string>
 
+    <string name="mrexample"><u>Mr Shiva </u></string>
+
     <string name="forgot_password_label">Forgot Password</string>
 
+    <string name="stay">Stay Tuned </string>
+    <string name="comingsoon">We are Coming Soon</string>
 
     <string name="name">"Name"</string>
     <string name="mobile">"Mobile No"</string>
     <string name="enterotp">"Enter otp"</string>
-    <string name="password">"Password"</string>
-    <string name="con_password">"Confirm Password"</string>
+    <string name="password"><u>Password</u></string>
+    <string name="con_password">Confirm Password</string>
+
+    <string name="mobilesignup">"Mobile No *"</string>
+    <string name="passwordsignup">"Password *"</string>
+
+    <string name="newbversion">"New Version Available"</string>
+
+    <string name="nointernet">"No internet Connection"</string>
+
+    <string name="nointernetdata">
+        <b>You are offline please check the your internet connection</b>
+    </string>
+
+    <string name="needupdate">
+        <b>A new version of GoodEggs is available on Google play store,Please update it</b>
+    </string>
 
     <string name="male">"Male"</string>
     <string name="female">"FeMale"</string>
@@ -54,6 +135,8 @@
     <string name="sendotp">"Send otp"</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_signup">Signup</string>
+
+    <string name="doorno">"Door No/Flat No"</string>
 
 
     <string name="enter_mobile">Enter Mobile No</string>
@@ -67,12 +150,56 @@
     <string name="register">Register</string>
     <string name="donthavesignin">Do have an account? Sign in</string>
 
-    <string name="welcomekirana">Welcome To Kirana Easy</string>
+    <string name="welcomekirana">Welcome To Good Eggs</string>
     <string name="verifymobile">Verify Your Mobile Number</string>
-    <string name="emailid">Email</string>
+    <string name="emailid">Email Id</string>
+    <string name="emailidsignup">Email Id *</string>
     <string name="verifynow">"Verify Now"</string>
 
     <string name="entermobileno">"Enter Your Mobile Number"</string>
 
     <string name="resend">Resend</string>
+    <string name="city">Location(In the range of 5 km) * </string>
+    <string name="pincode">Pincode(Tiruvuru-521235 In range of 5 km)</string>
+
+    <string name="landmark">Landmark</string>
+
+    <string name="wecanimporve">"What we can Improve?"</string>
+
+    <string name="product_name">Green Peas</string>
+    <string name="product_type">Essentials</string>
+    <string name="product_price">Rs 25.00</string>
+
+    <string name="topdeals">Top Deals</string>
+    <string name="kids">Kids Babies </string>
+    <string name="categories">Categories</string>
+
+    <string name="viewall">View all</string>
+
+    <string name="sendemail">Send</string>
+
+    <string name="emaildregister">Please enter your registered Email Id</string>
+
+    <string name="passwordd">Password</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="newapssword">New Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+
+    <string name="vitamnina">Vitamin A</string>
+    <string name="vitamind">Vitamin D</string>
+    <string name="vitamine">Vitamin E</string>
+    <string name="selenium">Selenium</string>
+
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+
+    </string-array>
+
 </resources>

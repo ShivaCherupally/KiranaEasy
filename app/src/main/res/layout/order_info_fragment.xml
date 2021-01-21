@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_15sdp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <com.goodeggs.android.fontstyles.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Product Name"
+                    android:textAllCaps="false"
+                    android:textColor="@color/feed_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/productname"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/yellow_ge"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="@string/vitamnina"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <com.goodeggs.android.fontstyles.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Product Qty"
+                    android:textAllCaps="false"
+                    android:textColor="@color/feed_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <Spinner
+                    android:id="@+id/productonespn"
+                    style="@style/mySpinnerItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/feed_text_color"
+                    android:dropDownSelector="@color/feed_text_color"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <com.goodeggs.android.fontstyles.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Pack Qty"
+                    android:textAllCaps="false"
+                    android:textColor="@color/feed_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <Spinner
+                    android:id="@+id/packonespn"
+                    style="@style/mySpinnerItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/feed_text_color"
+                    android:dropDownSelector="@color/feed_text_color"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:visibility="gone">
+
+                <com.goodeggs.android.fontstyles.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Delivery Date"
+                    android:textAllCaps="false"
+                    android:textColor="@color/feed_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.goodeggs.android.fontstyles.TextViewRegular
+                    android:id="@+id/deliverydate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/editBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_bg_black_stroke"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/feed_text_color"
+
+                    android:visibility="visible" />
+
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/updateOrderBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangel_box_grey_border"
+                    android:backgroundTint="@color/konect_color"
+                    android:text="Update"
+
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+
+                    android:visibility="gone" />
+
+                <com.goodeggs.android.fontstyles.ButtonMedium
+                    android:id="@+id/returnBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_bg_black_stroke"
+                    android:text="Return"
+                    android:textAllCaps="false"
+                    android:textColor="@color/feed_text_color" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/productimg"
+                android:background="@color/lite_black"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

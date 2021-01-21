@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data class="ActivityMenuBind">
+    <data>
 
     </data>
 
@@ -13,187 +13,255 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/app_bar_layout">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/tLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-                <FrameLayout
-                    android:id="@+id/frameLayout"
+                <RelativeLayout
+                    android:id="@+id/seachLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <androidx.coordinatorlayout.widget.CoordinatorLayout
-                        android:id="@+id/coordinatorLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iVLogoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/skyblue_ge"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:src="@drawable/homelogo"
+                        tools:ignore="ContentDescription" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorAccent"
+                        android:layout_toRightOf="@+id/iVLogoText"
+                        android:visibility="visible">
+
 
                         <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <com.kiranam.android.customviews.viewpagers.SwipeDisableViewPager
-                                android:id="@+id/swipeDisableViewPager"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" />
-
-                            <RelativeLayout
-                                android:id="@+id/rrBottomNavigation"
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/_60sdp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="bottom">
-
-                                <!--  app:layout_behavior="info.celebkonnect.flow.bottommenu.customviews.views.ScrollingBehavior">-->
-                                <LinearLayout
-                                    android:id="@+id/llCurveBottom"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="bottom"
-                                    android:visibility="visible">
-
-                                    <RelativeLayout
-                                        android:id="@+id/rlHome"
-                                        android:layout_width="0dp"
-                                        android:layout_height="@dimen/_40sdp"
-                                        android:layout_gravity="bottom"
-                                        android:layout_marginBottom="@dimen/_minus2sdp"
-                                        android:layout_weight="1"
-                                        android:background="@drawable/ic_side_new">
-
-                                        <ImageView
-                                            android:id="@+id/imageViewHome"
-                                            android:layout_width="@dimen/_20sdp"
-                                            android:layout_height="@dimen/_20sdp"
-                                            android:layout_centerHorizontal="true"
-                                            android:layout_centerVertical="true"
-                                            android:src="@drawable/ic_baseline_home_24"
-                                             />
-                                    </RelativeLayout>
-
-                                    <RelativeLayout
-                                        android:id="@+id/rlSearch"
-                                        android:layout_width="0dp"
-                                        android:layout_height="@dimen/_40sdp"
-                                        android:layout_gravity="bottom"
-                                        android:layout_marginBottom="@dimen/_minus2sdp"
-                                        android:layout_weight="1"
-                                        android:background="@drawable/ic_side_new">
-
-                                        <ImageView
-                                            android:id="@+id/imageViewSearch"
-                                            android:layout_width="@dimen/_20sdp"
-                                            android:layout_height="@dimen/_20sdp"
-                                            android:layout_centerHorizontal="true"
-                                            android:layout_centerVertical="true"
-                                            android:src="@drawable/ic_baseline_search_24" />
-                                    </RelativeLayout>
-
-                                    <RelativeLayout
-                                        android:id="@+id/rlCk"
-                                        android:layout_width="0dp"
-                                        android:layout_height="@dimen/_60sdp"
-                                        android:layout_marginBottom="@dimen/_minus2sdp"
-                                        android:layout_weight="1.7">
-
-                                        <ImageView
-                                            android:id="@+id/imageViewCK"
-                                            android:layout_width="@dimen/_38sdp"
-                                            android:layout_height="@dimen/_38sdp"
-                                            android:layout_centerHorizontal="true"
-                                            android:layout_marginTop="@dimen/_5sdp"
-                                            android:src="@drawable/ic_house" />
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="@dimen/_40sdp"
-
-                                            android:layout_alignParentBottom="true"
-                                            android:background="@drawable/ic_new_bottom_bar_curve" />
-                                    </RelativeLayout>
-
-                                    <RelativeLayout
-                                        android:id="@+id/rlChat"
-                                        android:layout_width="0dp"
-                                        android:layout_height="@dimen/_40sdp"
-                                        android:layout_gravity="bottom"
-                                        android:layout_marginBottom="@dimen/_minus2sdp"
-                                        android:layout_weight="1"
-                                        android:background="@drawable/ic_side_new">
-
-                                        <ImageView
-                                            android:id="@+id/imageViewChat"
-                                            android:layout_width="@dimen/_20sdp"
-                                            android:layout_height="@dimen/_20sdp"
-                                            android:layout_centerHorizontal="true"
-                                            android:layout_centerVertical="true"
-                                            android:src="@drawable/ic_baseline_transfer_within_a_station_24" />
-
-                                        <ImageView
-                                            android:id="@+id/badge_curve"
-                                            android:layout_width="@dimen/_10sdp"
-                                            android:layout_height="@dimen/_10sdp"
-                                            android:layout_gravity="top|center_horizontal"
-                                            android:layout_marginLeft="@dimen/_32sdp"
-                                            android:layout_marginTop="@dimen/_10sdp"
-                                            android:background="@drawable/ic_real_estate"
-                                            android:gravity="center"
-                                            android:textColor="@color/white"
-                                            android:visibility="gone" />
-                                    </RelativeLayout>
-
-                                    <RelativeLayout
-                                        android:id="@+id/rlMenu"
-                                        android:layout_width="0dp"
-                                        android:layout_height="@dimen/_40sdp"
-                                        android:layout_gravity="bottom"
-                                        android:layout_marginBottom="@dimen/_minus2sdp"
-                                        android:layout_weight="1"
-                                        android:background="@drawable/ic_side_new">
-
-                                        <ImageView
-                                            android:id="@+id/imageViewMenu"
-                                            android:layout_width="@dimen/_20sdp"
-                                            android:layout_height="@dimen/_20sdp"
-                                            android:layout_centerHorizontal="true"
-                                            android:layout_centerVertical="true"
-                                            android:src="@drawable/ic_baseline_settings_24" />
-                                    </RelativeLayout>
-                                </LinearLayout>
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="@dimen/_1sdp"
-                                    android:layout_marginTop="@dimen/_19sdp"
-                                    android:background="@color/lite_black"
-                                    android:visibility="gone" />
-
-                            </RelativeLayout>
+                            android:id="@+id/rlNoticationLayout"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="@dimen/_10sdp">
 
 
-                            <ProgressBar
-                                android:id="@+id/progressBar"
-                                style="?android:attr/progressBarStyleHorizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                            <ImageView
+                                android:id="@+id/iNotifications"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_shopping_cart_red"
+                                android:tint="@color/white" />
+
+
+                            <TextView
+                                android:id="@+id/badgeCounttv"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
                                 android:layout_alignParentTop="true"
-                                android:indeterminate="true"
-                                android:indeterminateTint="@color/app_snack_bar_true"
-                                android:visibility="gone" />
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/badge_background"
+                                android:gravity="center"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="10sp"
+                                android:text="2"
 
+
+                                android:visibility="visible" />
                         </RelativeLayout>
 
-                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-                </FrameLayout>
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.goodeggs.android.customviews.viewpagers.SwipeDisableViewPager
+                        android:id="@+id/swipeDisableViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_50sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rrBottomNavigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="bottom">
+
+                        <LinearLayout
+                            android:id="@+id/llCurveBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:id="@+id/rlHome"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/_minus2sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_side_new">
+
+                                <ImageView
+                                    android:id="@+id/imageViewHome"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_baseline_home_24" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlSearch"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/_minus2sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_side_new"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/imageViewSearch"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_baseline_search_24" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlCk"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginBottom="@dimen/_minus2sdp"
+                                android:layout_weight="1.7"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/imageViewCK"
+                                    android:layout_width="@dimen/_38sdp"
+                                    android:layout_height="@dimen/_38sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:src="@drawable/ic_house" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@drawable/ic_new_bottom_bar_curve" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlDealToday"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/_minus2sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_side_new">
+
+                                <ImageView
+                                    android:id="@+id/imageViewChat"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_deals" />
+
+                                <ImageView
+                                    android:id="@+id/badge_curve"
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:layout_marginLeft="@dimen/_32sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/ic_real_estate"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMenu"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/_minus2sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_side_new">
+
+                                <ImageView
+                                    android:id="@+id/imageViewMenu"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_baseline_menu_24" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_19sdp"
+                            android:background="@color/lite_black"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/app_snack_bar_true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
         </LinearLayout>
 
 

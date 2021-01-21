@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dealsday"
+            type="com.goodeggs.android.model.DealData" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/productimg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productimg"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <com.goodeggs.android.fontstyles.TextViewBold
+                    android:id="@+id/itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_toLeftOf="@+id/itempricetv"
+                    android:maxLines="1"
+                    android:padding="3dp"
+                    android:text="@{dealsday.banner_title}"
+                    android:textColor="@color/black" />
+
+
+                <com.goodeggs.android.fontstyles.TextViewBold
+                    android:id="@+id/tvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemname"
+                    android:layout_gravity="center"
+                    android:maxLines="2"
+                    android:padding="2dp"
+                    android:text="@{dealsday.product_name}"
+                    android:textColor="@color/lite_black" />
+
+
+                <com.goodeggs.android.fontstyles.TextViewBold
+                    android:id="@+id/itempricetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
